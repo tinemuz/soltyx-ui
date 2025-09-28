@@ -1,7 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Logo from '../assets/logo.svg'
 ---
 
 <Layout>
-
+    <div class="flex w-full h-full flex-col items-center justify-center text-center bg-white text-black">
+        <span class="pt-72 pb-32">
+            <span class="font-bold">Soltyx</span> is an engineering studio where your vision meets calculated integrity. We build minimal,<br/>
+            elegant applications that are engineered with the structural precision necessary to withstand<br/>
+            the forces of time and scale.
+        </span>
+        <div class="lg:w-4/5 relative">
+            <video
+                    autoplay
+                    muted
+                    loop
+                    class="absolute inset-0 w-full h-full object-cover"
+                    style={`-webkit-mask: url(${Logo.src}) no-repeat center; mask: url(${Logo.src}) no-repeat center; -webkit-mask-size: contain; mask-size: contain;`}
+            >
+                <source src="https://cdn.pixabay.com/video/2019/04/20/22908-331768732_large.mp4"/>
+            </video>
+            <img src={Logo.src} class="w-full h-auto opacity-0" alt="reioni logo" />
+        </div>
+    </div>
 </Layout>

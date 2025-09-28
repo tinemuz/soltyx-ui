@@ -11,10 +11,8 @@ import Nav from "../components/Nav.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Soltyx</title>
 	</head>
-	<body class="m-o w-full h-full">
+	<body class="w-full h-full">
 		<slot />
-        <div class="bg-white h-screen w-screen text-black">
-            <Nav/>
-        </div>
+        <Nav/>
 	</body>
 </html>
